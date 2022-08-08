@@ -1,0 +1,1926 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <title>Portfolio</title>
+  
+        <style>
+
+          ::-webkit-scrollbar{
+            width: 20px;
+          }
+          ::-webkit-scrollbar-track{
+            border-radius: 30px;
+            /* box-shadow: inset 5px 5px 20px black; */
+          }
+          ::-webkit-scrollbar-thumb{
+            border-radius: 30px;
+            background-color: rgb(247,72,78);
+          }
+          ::-webkit-scrollbar-thumb:hover{
+            box-shadow: inset 5px 5px 20px 1px black;
+          }
+
+
+            *{
+              padding: 0;
+              margin: 0;
+            }
+            body{
+              scroll-behavior: smooth;
+              overflow-x: hidden;
+              font-family: Arial, Helvetica, sans-serif;
+            }
+
+
+
+            /* -------------------------------------Portfolio------------------------------ */
+
+
+            #hide{
+              text-align: center;
+              width: 50px;
+              height: 50px;
+              position: absolute;
+              right: 50px;
+              top: 30px;
+              z-index: 10000;
+              /* border: 1px solid white; */
+              border-radius: 50%;
+              background-color: white;
+            }
+            #hide i{
+              margin-top: 12px;
+              color: rgb(0,184,254);
+              font-size: 30px;
+            }
+
+
+
+            #modal-content{
+              width: 400px;
+              height: 300px;
+              z-index: 11111;
+              margin: 36vw;
+              top: -40vh;
+              box-shadow: 10px 10px 20px 0px  gray;
+              border-radius: 10px;
+              background-color: white;
+              position: absolute;
+            }
+            #modal-content a{
+              float: right;
+              color: black;
+              margin-top: 10px;
+              margin-right: 20px;
+              font-weight: bold;
+              text-decoration: none;
+            }
+            #modal-content h2{
+              margin-top: 40px;
+              color: rgb(247,72,78);
+              text-align: center;
+            }
+            #modal-content p{
+              width: 260px;
+              margin: auto;
+              margin-top: 30px;
+              text-align: center;
+              color: gray;
+            }
+            #modal-content input{
+              width: 300px;
+              height: 40px;
+              border: 1px solid rgb(218, 218, 218);
+              border-radius: 30px;
+              /* border: none; */
+              outline: none;
+              margin: 20px 50px; 
+            }
+            #modal-container:target {
+                opacity: 1;
+                animation: search-move 1s ease-out;
+                visibility: visible;
+                transition: opacity 0.5s ease, visibility 0.3s ease;
+            }
+            #modal-container{
+              position: absolute;
+            }
+            
+            @keyframes search-move {
+              0%{margin-left: 40vw;}
+              100%{margin-left: 0vw;}
+            }
+            #modal-container:not(:target) {
+                opacity: 0;
+                visibility: hidden;
+                transition: opacity 0.5s ease, visibility 0.3s ease;
+            }
+
+
+
+
+
+            /* -----------------------------------About----------------------------- */
+
+
+
+
+
+            #about{
+              width: 100%;
+              height: 200vh;
+              display: flex;
+              position: relative;
+              background-color: white;
+            }
+            #leftside{
+              width: 50%;
+              height: 100vh;
+              position: sticky;
+              top: 0;
+              background-color: rgb(23,31,42);
+            }
+            #rightside{
+              width: 50%;
+              height: 200vh;
+              background-color: white;
+            }
+            #leftside p{
+              width: 10vw;
+              color: white;
+              font-size: 50px;
+              margin: 44vh auto;
+              font-family: 'Courier New', Courier, monospace;
+              /* background-color: yellowgreen; */
+              text-align: center;
+            }
+
+            #leftside #image{
+              width: 250px;
+              height: 200px;
+              position: absolute;
+              top: 10vh;
+              left: 40.8vw;
+              background-size: cover;
+              background-position-x: -10px;
+              background-position-y: -150px;
+              background-image: url(./portfolio-images/Snapchat-862773242.jpg);
+              background-color: white;
+              clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+            }            
+            #rightside-heading{
+              width: 33vw;
+              font-size: 16px;
+              /* background: lightsalmon; */
+              margin-left: 10vw;
+              margin-top: 18vh;
+              font-weight: bold;
+            }
+            #rightside-para{
+              width: 33vw;
+              font-size: 16px;
+              /* background: lightsalmon; */
+              margin-left: 10vw;
+              margin-top: 5vh;
+              line-height: 30px;
+            }
+            #rightside-heading-2{
+              width: 10vw;
+              font-size: 20px;
+              /* background: lightsalmon; */
+              margin-left: 10vw;
+              margin-top: 5vh;
+              font-weight: bold;
+            }
+            #rightside-para-2{
+              width: 33vw;
+              font-size: 16px;
+              /* background: lightsalmon; */
+              margin-left:  10vw;
+              margin-top: 3vh;
+              line-height: 30px;
+            }
+            #rightside-para-3{
+              width: 33vw;
+              font-size: 16px;
+              /* background: lightsalmon; */
+              margin-left:  10vw;
+              margin-top: 5vh;
+              line-height: 30px;
+              font-weight: bold;
+            }
+            #rightside-heading-3{
+              width: 10vw;
+              font-size: 20px;
+              /* background: lightsalmon; */
+              margin-left:  10vw;
+              margin-top: 5vh;
+              font-weight: bold;
+            }
+            #rightside-para-4{
+              width: 33vw;
+              font-size: 16px;
+              /* background: lightsalmon; */
+              margin-left:  10vw;
+              margin-top: 5vh;
+              line-height: 30px;
+              /* font-weight: bold; */
+            }
+            #rightside-para-5{
+              width: 33vw;
+              font-size: 16px;
+              /* background: lightsalmon; */
+              margin-left:  10vw;
+              margin-top: 5vh;
+              line-height: 30px;
+              /* font-weight: bold; */
+            }
+            #rightside-point-1{
+              width: 33vw;
+              margin-top: 10vh;
+              margin-left:  10vw;
+              height: max-content;
+              display: flex;
+              /* background-color: magenta; */
+            }
+            #rightside-point-1 span{
+              font-size: 25px;
+              color: rgb(247,72,78);
+            }
+            #rightside-point-1 h3{
+              font-size: 20px;
+              margin-left: 6px;
+              color: black;
+            }
+            #rightside-point-1 p{
+              font-size: 20px;
+              color: black;
+              margin-left: 6px;
+            }
+
+
+            #rightside-point-2{
+              width: 33vw;
+              margin-top: 3vh;
+              margin-left: 10vw;
+              height: max-content;
+              display: flex;
+              /* background-color: magenta; */
+            }
+            #rightside-point-2 span{
+              font-size: 25px;
+              color: rgb(247,72,78);
+            }
+            #rightside-point-2 h3{
+              font-size: 20px;
+              margin-left: 6px;
+              color: black;
+            }
+            #rightside-point-2 p{
+              font-size: 20px;
+              color: black;
+              margin-left: 6px;
+            }
+
+
+            #rightside-point-3{
+              width: 33vw;
+              margin-top: 3vh;
+              margin-left: 10vw;
+              height: max-content;
+              display: flex;
+              /* background-color: magenta; */
+            }
+            #rightside-point-3 span{
+              font-size: 25px;
+              color: rgb(247,72,78);
+            }
+            #rightside-point-3 h3{
+              font-size: 20px;
+              margin-left: 6px;
+              color: black;
+            }
+            #rightside-point-3 p{
+              font-size: 20px;
+              color: black;
+              margin-left: 6px;
+            }
+
+
+            #rightside-point-4{
+              width: 33vw;
+              margin-top: 3vh;
+              margin-left: 10vw;
+              height: max-content;
+              display: flex;
+              /* background-color: magenta; */
+            }
+            #rightside-point-4 span{
+              font-size: 25px;
+              color: rgb(247,72,78);
+            }
+            #rightside-point-4 h3{
+              font-size: 20px;
+              margin-left: 6px;
+              color: black;
+            }
+            #rightside-point-4 p{
+              font-size: 20px;
+              color: black;
+              margin-left: 6px;
+            }
+            #leftside p:hover{
+              background-color: #2196f3;
+              box-shadow: 10px 10px 40px 10px #2196f3;
+            }
+            
+            #about-nav{
+              width: 20vw;
+              height: 50px;
+              font-family: 'Courier New', Courier, monospace;
+              margin-left: 15vw;
+              margin-top: -6vh;
+              /* background-color: aqua; */
+            }
+            #about-nav ul{
+              list-style: none;
+              display: flex;
+              justify-content: space-evenly;
+            }
+            #about-nav ul span{
+              font-weight: bold;
+              font-size: 20px;
+              color: rgb(247,72,78);
+            }
+            #about-nav ul li a{
+              color: white;
+              text-decoration: none;
+            }
+            #about-nav ul li a:hover{
+              color: rgb(247,72,78);
+              font-weight: bold;
+            }
+
+
+
+
+
+            /* -----------------------------Home--------------------------------- */
+
+
+
+
+
+            #home-main{
+              width: 100%;
+              height: 100vh;
+              position: relative;
+              padding: 1px;
+              background-color: rgb(65,72,98);
+            }
+            #home-upper{
+              width: 300px;
+              height: 250px;
+              position: absolute;
+              top: 0;
+              right: 0;
+              background-color: rgb(0,184,254);
+            }
+            #home-lower{
+              width: 300px;
+              height: 250px;
+              position: absolute;
+              bottom: 0;
+              left: 0;
+              background-color: rgb(0,184,254);
+            }
+            #home{
+              width:  87%;
+              height: 80vh;
+              position: absolute;
+              top: 10vh;
+              z-index: 1;
+              left: 6vw;
+              background-size: cover;
+              /* background-image: url(./portfolio-images/bg.jpg); */
+              background-color: rgb(23,31,42);
+            }
+            #home-navbar{
+              width: 100%;
+              height: 12vh;
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+              /* background-color: rgb(79, 200, 248); */
+            }
+            #navbar-logo{
+              width: 200px;
+              height: 60px;
+              text-align: center;
+              font-size: 40px;
+              font-weight: bold;
+              color: white;
+              font-family: 'Courier New', Courier, monospace;
+              /* background-color: red; */
+            }
+            #nav{
+              width: 400px;
+              height: 40px;
+              z-index: 111;
+              font-family: 'Courier New', Courier, monospace;
+              /* background-color: red; */
+            }
+            #nav ul{
+              list-style: none;
+              display: flex;
+              justify-content: space-evenly;
+              align-items: center;
+            }
+            #nav ul li a{
+              font-weight: bold;
+              color: white;
+              font-size: 20px;
+              text-decoration: none;
+            }
+            #nav ul li{
+              overflow: hidden;
+              position: relative;
+            }
+            #nav ul li::after{
+              content: "";
+              width: 100%;
+              height: 2px;
+              left: -100%;
+              bottom: 0px;
+              position: absolute;
+              transition: 0.5s ease;
+              background-color: rgb(247,72,78);
+            }
+            #nav ul li:hover:after{
+              left: 0;
+            }
+            #nav ul li a:hover{
+              color: rgb(247,72,78);
+            }
+
+            #home-content{
+              width: 85%;
+              height: 40vh;
+              display: flex;
+              align-items: center;
+              justify-content: space-evenly;
+              margin: 15vh auto;
+              /* background-color: violet; */
+            }
+            #home-content-text{
+              width: 35vw;
+              height: 200px;
+              /* background-color: turquoise; */
+            }
+            #home-content-image{
+              width: 38vw;
+              height: 72vh;
+              background-size: cover;
+              background-image: url(./portfolio-images/server-illustration-2.759ff537.svg);
+              margin-top: -12vh;
+              margin-left: 5vw;
+              /* background-color: lightgreen; */
+            }
+            #home-content-text-heading{
+              font-size: 2vw;
+              color: white;
+              text-align: center;
+            }
+            #home-content-text-para{
+              font-size: 1vw;
+              color: white;
+              height: 50px;
+              /* background-color: aqua; */
+              margin-top: 20px;
+              text-align: center;
+            }
+            #home-content-text a{
+              padding: 10px 30px;
+              border: 1px solid white;
+              border-radius: 30px;
+              color: white;
+              /* margin-left: 140px; */
+              text-decoration: none;
+              font-size: 0.9vw;
+              position: relative;
+              overflow: hidden;
+            }
+            #home-content-text-btn{
+              padding: 10px 0px;
+              /* border: 1px solid white; */
+              border-radius: 30px;
+              color: white;
+              margin-left: 8vw;
+              text-decoration: none;
+              font-size: 10px;
+              width: 210px;
+              position: relative;
+              overflow: hidden;
+            }
+            #home-content-text a::after{
+              width: 100%;
+              content: "";
+              padding: 18px 0px;
+              /* border: 1px solid white; */
+              border-radius: 30px;
+              color: white;
+              position: absolute;
+              left: -102%;
+              top: 0;
+              z-index: -11;
+              background-color: rgb(247,72,78);
+              text-decoration: none;
+              font-size: 15px;
+              transition: 0.8s;
+            }
+            #home-content-text a:hover:after{
+              left: 0;
+            }
+            /* #home-content-text a:hover{
+              border: 1px solid rgb(247,72,78);
+              color: rgb(247,72,78);
+              box-shadow: 5px 5px 20px 0 rgb(247,72,78);
+            } */
+
+
+
+
+            #social{
+              width: 300px;
+              height: 50px;
+              position: relative;
+              margin-top: -70px;
+              margin-left: 20px;
+              /* background-color: royalblue; */
+            }
+            #social-show{
+              /* width: 50px; */
+              /* height: 50px; */
+              padding: 5px 5px;
+              top: 0;
+              position: absolute;
+              border-radius: 50%;
+              /* background-color: white; */
+            }
+            #social-show i{
+              animation: icon-rotate 3s linear infinite;
+              font-size: 30px;
+              color: rgb(0,184,254);
+            }
+            #social-show i:hover{
+              animation-play-state: paused;
+            }
+            @keyframes icon-rotate {
+              0%{transform: rotate(0deg);}
+              100%{transform: rotate(360deg);}
+            }
+            /* #social-hide:target{
+              visibility: visible;
+            }
+            #social-hide:not(:target){
+              visibility: hidden;
+            } */
+            #social-show:hover ~ #social-hide{
+              visibility: visible;
+              cursor: pointer;
+              width: 120px;
+              /* animation: social 1s ease;  */
+            }
+            #social-hide #social-hide-child:hover{
+              visibility: visible;
+              width: 120px;
+              cursor: pointer;
+            }
+            /* @keyframes social {
+              0%{width: 0px;}
+              100%{width: 200px;}
+            } */
+            #social-hide{
+              width: 0px;
+              height: 40px;
+              visibility: hidden;
+              top: 0;
+              overflow: hidden;
+              transition: 1s ease;
+              margin-left: 40px;
+              position: absolute;
+              /* background-color: blue; */
+            }
+            #social-hide-child{
+              width: 120px;
+              height: 40px;
+              display: flex;
+              position: relative;
+              justify-content: space-evenly;
+              align-items: center;
+              /* background-color: brown; */
+            }
+            #social-hide-child i{
+              color: white;
+              font-size: 20px;
+            }
+
+            
+
+
+
+            /* -----------------------------------portfolio------------------------------ */
+
+
+
+
+
+            #portfolio{
+              width: 100%;
+              height: auto;
+              display: flex;
+              flex-direction: row;
+              flex-wrap: wrap;
+              position: relative;
+              background-color: white;
+            }
+            #portfolio-leftside{
+              width: 50%;
+              height: 100vh;
+              position: sticky;
+              top: 0;
+              background-color: rgb(247,72,78);
+            }
+            #portfolio-rightside{
+              width: 50%;
+              height: 370vh;
+              background-color: white;
+            }
+            #portfolio-leftside p{
+              width: max-content;
+              color: white;
+              width: 35vw;
+              font-size: 5vw;
+              font-weight: bold;
+              margin: 44vh auto;
+              font-family: 'Courier New', Courier, monospace;
+              /* background-color: yellowgreen; */
+              text-align: center;
+            }
+            
+            
+            #portfolio-leftside p:hover{
+              background-color: rgb(0,184,254);
+              box-shadow: 5px 5px 30px 0px white;
+              cursor: pointer;
+            }
+            
+            #portfolio-nav{
+              width: 20vw;
+              height: 50px;
+              font-family: 'Courier New', Courier, monospace;
+              margin-left: 230px;
+              margin-top: -10vh;
+              /* background-color: aqua; */
+            }
+            #portfolio-nav ul{
+              list-style: none;
+              display: flex;
+              justify-content: space-evenly;
+            }
+            #portfolio-nav ul span{
+              font-weight: bold;
+              font-size: 20px;
+              color: rgb(23,31,42);
+            }
+            #portfolio-nav ul li a{
+              color: white;
+              font-weight: bold;
+              text-decoration: none;
+            }
+            #portfolio-nav ul li a:hover{
+              color: rgb(23,31,42);
+              font-weight: bold;
+            }
+
+
+            
+           
+            #parent{
+              width: 100%;
+              height: 110vh;
+              background: linear-gradient(180deg, rgba(0, 0, 0, 0.856), rgb(79, 200, 248)), url(./portfolio-images/To\ do.png);
+              background-size: cover;
+              padding: 1px;
+              background-attachment: fixed;
+            }
+            #first{
+              width: 700px;
+              height: 200px;
+              padding: 1px;
+              /* margin-top: 30px; */
+              position: relative;
+              display: flex;
+              justify-content: space-evenly;
+              /* background-color: rgb(37, 37, 37); */
+              border: 2px solid transparent;
+            }
+            #first-1{
+              width: 320px;
+              height: 200px;
+              /* background-color: violet; */
+            }
+            #first-1 h3{
+              font-size: 22px;
+              color: rgb(31, 30, 30);
+              margin-top: 30px;
+              margin-left: 20px;
+            }
+            #first-1 p{
+              margin-top: 20px;
+              color: rgb(31, 30, 30);
+              height: 60px;
+              font-size: 15px;
+              margin-left: 20px;
+            }
+            #first-1 a{
+              margin-left: 20px;
+              padding: 10px 30px;
+              color: white;
+              text-decoration: none;
+              background-color: rgb(247,72,78);
+            }
+            #first-2{
+              width: 320px;
+              height: 200px;
+              /* background-color: violet; */
+            }
+            #first-2 p{
+              margin-top: 20px;
+              color: rgb(31, 30, 30);
+              height: 100px;
+              font-size: 15px;
+              margin-left: 20px;
+            }
+            #first-2 a{
+              /* margin-left: 20px; */
+              /* padding: 10px 30px; */
+              color: rgb(247,72,78) ;
+              text-decoration: none;
+              margin-left: 30px;
+              /* background-color: rgb(185, 144, 8); */
+            }
+
+            
+            
+            #main-1{
+              width: 33vw;
+              height: 320px;
+              padding: 1px;
+              /* margin-top: 30px; */
+              position: relative;
+              /* background-color: lightcoral; */
+              border: 2px solid transparent;
+            }
+            #main-1 img{
+              width: 100%;
+              height: 100%;
+              position: absolute;
+            }
+            #main-1-upper{
+              width: 32vw;
+              height: 310px;
+              padding: 1px;
+              top: 0;
+              left: 0;
+              /* margin-top: -100px; */
+              /* display: block; */
+              position: absolute;
+              /* background-color: red; */
+              border: 2px solid transparent;
+            }
+            #main-1-upper h2{
+              color: transparent;
+              margin-top: 30px;
+              margin-left: 10px;
+              text-decoration: none;
+            }
+            #main-1-upper p{
+              color: transparent;
+              margin-top: 5px;
+              margin-left: 10px;
+              text-decoration: none;
+            }
+            #main-1:hover{
+              /* transition: 0.3s ease; */
+              /* box-shadow: 10px 10px 50px rgb(0, 217, 255); */
+              border: 3px solid rgb(247,72,78);
+            }
+            
+            #main-1 a{
+              /* display: none; */
+              /* background-color: cadetblue; */
+              padding: 100px 150px;
+              /* margin-top: 20px; */
+              position: absolute;
+            }
+            #main-2-parent{
+              width: 45vw;
+              height: 100vh;
+              display: flex;
+              align-items: center;
+              flex-direction: column;
+              justify-content: space-between;
+              margin-top: 40px;
+              margin-left: 30px;
+              /* border: 2px solid red; */
+            }
+            #main-2{
+              width: 33vw;
+              height: 48vh;
+              /* margin-top: 30px; */
+              /* border: 2px solid blue; */
+            }
+            
+            #extention img{
+              width: 35px;
+              /* margin-top: 10px; */
+              margin-left: 20px;
+            }
+            #extention p{
+              font-size: 15px;
+              color: rgb(23,31,42);
+              font-weight: bold;
+              margin-top: -25px;
+              margin-left: 60px;
+            }
+
+            #main-3-parent{
+              width: 1100px;
+              height: 250px;
+              display: flex;
+              justify-content: space-between;
+              margin-top: 10px;
+              margin-left: 30px;
+              border: 2px solid red;
+            }
+
+
+
+
+
+
+            /* -------------------------------------Qoutation---------------------------- */
+
+
+
+
+
+            #quot-main{
+              width: 100%;
+              height: 100vh;
+              padding: 1px;
+              position: relative;
+              background-color: rgb(23,31,42);
+            }
+            #blue-line{
+              width: 100%;
+              height: 20vh;
+              margin: 40vh 0%;
+              background-color: rgb(79, 200, 248);
+            }
+            #white-box{
+              width: 80%;
+              height: 80vh;
+              top: 10vh;
+              left: 10%;
+              overflow: hidden;
+              background-color: white;
+              position: absolute;
+            }
+            #red-line{
+              transform: rotate(50deg);
+              width: 10vw;
+              height: 170vh;
+              margin: -40vh 32vw;
+              background-color: rgb(247,72,78);
+            }
+
+            #qout-shape{
+              clip-path: polygon(100% 24%, 22% 19%, 22% 79%, 100% 75%, 23% 99%, 0 74%, 0 27%, 24% 0);
+              top: 10vh;
+              left: 15vw;
+              position: absolute;
+              background-color: rgb(79, 200, 248);
+              width: 400px;
+              height: 400px;
+            }
+            #qoutation{
+              width: 550px;
+              height: 200px;
+              top: 23.5vh;
+              left: 23vw;
+              border-radius: 10px;
+              animation: qout-rotate 6s linear infinite;
+              position: absolute;
+              box-shadow: 5px 5px 30px 0 gray;
+              background-color: white;
+            }
+            @keyframes qout-rotate {
+              0%{transform: rotateY(0deg);}
+              90%{transform: rotateY(0deg);}
+              100%{transform: rotateY(360deg);}
+            }
+            /* @keyframes qout-rotate {
+              0%{transform: rotateY(0deg);}
+              30%{transform: rotateY(0deg);}
+              35%{transform: rotateY(180deg);}
+              65%{transform: rotateY(180deg);}
+              70%{transform: rotateY(360deg);}
+              99.999%{transform: rotateY(360deg);}
+              100%{transform: rotateY(0deg);}
+            } */
+            #qoutation p{
+              width: 400px;
+              height: 100px;
+              margin: 5vh 7vw;
+              font-size: 23px;
+              color: rgb(23,31,42);
+              z-index: 111;
+              /* background: sienna; */
+            }
+            #qoutation i{
+              font-size: 70px;
+              margin-left: 20px;
+              margin-top: 20px;
+              position: absolute;
+              color: rgba(247, 72, 78, 0.527);
+            }
+
+            #qoutation-a{
+              width: 550px;
+              height: 200px;
+              top: 23.5vh;
+              left: 23vw;
+              border-radius: 10px;
+              animation: qout-rotate 4s linear infinite;
+              position: absolute;
+              transform: rotateY(180deg);
+              box-shadow: 5px 5px 30px 0 gray;
+              background-color: white;
+            }
+            #qoutation-a p{
+              width: 400px;
+              height: 100px;
+              margin: 5vh 7vw;
+              font-size: 23px;
+              color: rgb(23,31,42);
+              z-index: 111;
+              /* background: sienna; */
+            }
+            #qoutation-a i{
+              font-size: 70px;
+              margin-left: 20px;
+              margin-top: 20px;
+              position: absolute;
+              color: rgba(247, 72, 78, 0.527);
+            }
+
+
+            
+
+
+
+            /* -------------------------------contact-------------------------- */
+
+
+
+
+
+            #contact{
+              width: 100%;
+              height: 100vh;
+              display: flex;
+              position: relative;
+              background-color: white;
+            }
+            #contact-leftside{
+              width: 50%;
+              height: 100vh;
+              position: relative;
+              /* top: 0; */
+              background-color: rgb(23,31,42);
+            }
+            #contact-rightside{
+              width: 50%;
+              height: 100vh;
+              background-color: white;
+            }
+            #contact-leftside p{
+              width: 200px;
+              color: white;
+              font-size: 50px;
+              margin: 44vh auto;
+              font-family: 'Courier New', Courier, monospace;
+              /* background-color: yellowgreen; */
+              text-align: center;
+            }
+
+            #contact-leftside #image{
+              width: 250px;
+              height: 200px;
+              position: absolute;
+              top: 10vh;
+              left: -6vw;
+              background-size: cover;
+              /* background-position-x: -10px; */
+              background-position-y: -20px;
+              background-image: url(./portfolio-images/phone-call-icon-telephone-symbol-260nw-1718244040.jpg);
+              background-color: white;
+              /* background-color: rgb(79, 200, 248); */
+              clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+            }
+            /* #contact-leftside #image img{
+              width: 100%;
+              margin-left: -10px;
+              margin-top: -90px;
+              height: 430px;
+            } */
+            #contact-leftside p:hover{
+              background-color: #2196f3;
+              box-shadow: 10px 10px 40px 10px #2196f3;
+            }
+            
+            #contact-nav{
+              width: 20vw;
+              height: 50px;
+              font-family: 'Courier New', Courier, monospace;
+              margin-left: 230px;
+              margin-top: -40px;
+              /* background-color: aqua; */
+            }
+            #contact-nav ul{
+              list-style: none;
+              display: flex;
+              justify-content: space-evenly;
+            }
+            #contact-nav ul span{
+              font-weight: bold;
+              font-size: 20px;
+              color: rgb(247,72,78);
+            }
+            #contact-nav ul li a{
+              color: white;
+              text-decoration: none;
+            }
+            #contact-nav ul li a:hover{
+              color: rgb(247,72,78);
+              font-weight: bold;
+            }
+
+            #contact-page{
+              width: 550px;
+              height: 600px;
+              margin: 70px auto;
+              border-radius: 20px;
+              background-color: rgb(23,31,42);
+            }
+            #contact-page-bar{
+              width: 550px;
+              height: 40px;
+              /* margin: 70px auto; */
+              display: flex;
+              align-items: center;
+              justify-content: space-between;
+              border-top-left-radius: 20px;
+              border-top-right-radius: 20px;
+              background-color: rgb(39, 44, 53);
+            }
+            #closing-1{
+              width: 80px;
+              height: 20px;
+              display: flex;
+              justify-content: space-evenly;
+              align-items: center;
+              margin-left: 10px;
+              /* background-color: indigo; */
+            }
+            #closing-2{
+              width: 25px;
+              border-radius: 30px;
+              margin-right: 10px;
+              height: 4px;
+              background-color: gray;
+            }
+            #closing-1-a{
+              width: 15px;
+              height: 15px;
+              border-radius: 50%;
+              background-color: rgb(247,72,78);
+            }
+            #closing-1-b{
+              width: 15px;
+              height: 15px;
+              border-radius: 50%;
+              background-color: yellow;
+            }
+            #closing-1-c{
+              width: 15px;
+              height: 15px;
+              border-radius: 50%;
+              background-color: greenyellow;
+            }
+
+
+
+            #contact-page-heading{
+              width: max-content;
+              font-weight: bold;
+              font-family: 'Courier New', Courier, monospace;
+              height: 50px;
+              font-size: 40px;
+              margin: 40px auto;
+              color: rgb(247,72,78);
+              /* background-color: saddlebrown; */
+            }
+            #contact-page-form{
+              width: 450px;
+              height: 350px;
+              margin: 40px auto;
+              /* background-color: darkgoldenrod; */
+            }
+            #contact-page-form input{
+              width: 100%;
+              height: 60px;
+              font-size: 20px;
+              background-color: transparent;
+              border: none;
+              border-bottom: 1px solid gainsboro;
+            }
+            #contact-page-form #form-text{
+              width: 100%;
+              height: 120px;
+              font-size: 20px;
+              border: none;
+              background-color: transparent;
+              border-bottom: 1px solid gainsboro;
+            }
+            #contact-page-form a{
+              /* background-color: darkgreen; */
+              float: right;
+              text-decoration: none;
+              font-size: 20px;
+              margin-top: 10px;
+              padding: 10px;
+              width: max-content;
+              color: rgb(247,72,78);
+            }
+            #contact-page p{
+              font-size: 12px;
+              margin: auto;
+              color: gray;
+              width: max-content;
+              /* background-color: darkmagenta; */
+            }
+            
+
+
+
+            /* ------------------------------------Service--------------------- */
+
+
+
+
+
+
+              #service{
+                width: 100%;
+                height: 100vh;
+                background-color: white;
+              }
+              #service-blue{
+                width: 100%;
+                height: 20vh;
+                margin-top: 40vh;
+                position: absolute;
+                background-color: rgb(0,184,254);
+              }
+              #service-white{
+                width: 80%;
+                height: 600px;
+                margin-left: 150px;
+                margin-top: 10vh;
+                position: absolute;
+                background-color: rgb(23,31,42);
+              }
+              #main-parent{
+              width: 40%;
+              height: 600px;
+              padding: 1px;
+              margin: auto;
+              /* margin: 60px 600px; */
+              /* background-color: hotpink; */
+            }
+            #main-parent:hover .cube-child{
+              animation-play-state: paused;
+            }
+            #cube{
+              width: 250px;
+              height: 250px; 
+              margin: 18vh 140px;
+              perspective: 800px;
+              perspective-origin: 50% calc(50% - 15em);
+              /* background-color: darkolivegreen; */
+            }
+            .cube-child{  
+              width: 100%;
+              height: 100%;
+              position: relative;
+              transform: rotateX(-20deg);
+              animation: cube-slide 20s linear infinite;
+              transform-style: preserve-3d;
+              /* background-color: darkorchid; */
+            }
+            @keyframes cube-slide {
+              0%{transform: rotateY(0deg);}
+              10%{transform: rotateY(0deg);}
+              15%{transform: rotateY(45deg);}
+              25%{transform: rotateY(45deg);}
+              30%{transform: rotateY(90deg);}
+              40%{transform: rotateY(90deg);}
+              45%{transform: rotateY(135deg);}
+              55%{transform: rotateY(135deg);}
+              60%{transform: rotateY(180deg);}
+              70%{transform: rotateY(180deg);}
+              75%{transform: rotateY(225deg);}
+              85%{transform: rotateY(225deg);}
+              90%{transform: rotateY(270deg);}
+              98%{transform: rotateY(270deg);}
+              100%{transform: rotateY(0deg);}
+            }
+            .cube-face{
+              width: 200px; 
+              height: 200px;
+              border-radius: 20px;
+              position: absolute;
+              /* box-shadow: 5px 5px 20px 0 rgb(247,72,78); */
+              background-color: white;
+            }
+            .cube-face:hover{
+              cursor: pointer;
+              background-color: rgb(247,72,78);
+            }
+            .cube-face:hover #team-number{
+              color: white;
+            }
+            .cube-face:hover #team-email{
+              color: white;
+            }
+            
+            .cube-front{
+              transform: rotateY(0deg) translateZ(300px); 
+            }
+            .cube-front:hover{
+              transform: rotateY(0deg) translateZ(350px) translateY(-15px);
+            }
+            .cube-mid1{
+              transform: rotateY(45deg)translateZ(300px);
+            }
+            .cube-mid1:hover{
+              transform: rotateY(45deg)translateZ(350px) translateY(-15px);
+            }
+            .cube-right{
+              transform: rotateY(90deg)translateZ(300px) ;
+            }
+            .cube-right:hover{
+              transform: rotateY(90deg)translateZ(350px) translateY(-15px);
+            }
+            .cube-mid2{
+              transform: rotateY(135deg)translateZ(300px);
+            }
+            .cube-mid2:hover{
+              transform: rotateY(135deg)translateZ(350px) translateY(-15px);
+            }
+            .cube-back{
+              transform: rotateY(180deg)translateZ(300px);
+            }
+            .cube-back:hover{
+              transform: rotateY(180deg)translateZ(350px) translateY(-15px);
+            }
+            .cube-mid3{
+              transform: rotateY(-45deg)translateZ(300px);
+            }
+            .cube-mid3:hover{
+              transform: rotateY(-45deg)translateZ(350px) translateY(-15px);
+            }
+            .cube-left{
+              transform: rotateY(-90deg)translateZ(300px);
+            }
+            .cube-left:hover{
+              transform: rotateY(-90deg)translateZ(350px) translateY(-15px);
+            }
+            .cube-mid4{
+              transform: rotateY(-135deg)translateZ(300px);
+            }
+            .cube-mid4:hover{
+              transform: rotateY(-135deg)translateZ(350px) translateY(-15px);
+            }
+
+            #team-image{
+              width: 80px;
+              height: 80px;
+              margin: 20px auto;
+              border-radius: 50%;
+              /* background-color: darkred; */
+            }
+            #team-image img{
+              width: 100%;
+              height: 100%;
+              border-radius: 50%; 
+            }
+            #team-heading{
+              text-align: center;
+              font-size: 15px;
+              color: rgb(31, 30, 30);
+            }
+            #team-para{
+              text-align: center;
+              font-size: 12px;
+              color: gray;
+            }
+            #team-number{
+              text-align: center;
+              font-size: 15px;
+              color: rgb(247,72,78);
+            }
+            #team-email{
+              text-align: center;
+              font-size: 15px;
+              color: rgb(247,72,78);
+            }
+
+
+
+
+  
+            @media screen and (max-width: 1024px) {
+              
+        
+                  
+
+              
+            }
+
+
+
+            
+
+
+        </style>
+
+
+</head>
+<body>
+
+
+        <div id="home-main"> 
+
+          <div id="hide">
+            <a href="#modal-container"><i class="fas fa-search"></i></a>
+          </div>
+          <div id="modal-container">
+            <div id="modal-content">
+              <a href="#" class="modal-close">Close</a>
+              <h2>I'm a Modal</h2>
+              <input type="text" placeholder="   Search">
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur et quam quod architecto vel eos blanditiis nisi maiores vitae.
+              </p>
+            </div>
+          </div>
+
+            <div id="home-upper"></div>
+           
+            <div id="home">
+                <div id="home-navbar">
+                  <div id="navbar-logo">Ahmad</div>
+                  <div id="nav">
+                      <ul>
+                        <li><a href="#portfolio">Portfolio</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                      </ul>
+                  </div>
+                </div>
+                <div id="home-content">
+                  <div id="home-content-text">
+                    <div id="home-content-text-heading">
+                      IT's New Black Design For Website</div>
+                      <div id="home-content-text-para">
+                        Hello! This is an Awoesome Black Design For Your Website</div>
+                        <div id="home-content-text-btn"><a href="#">MORE INFORMATION</a></div>
+                  </div>
+                  <div id="home-content-image"></div>
+                </div>
+
+                  <div id="social">
+                  <div id="social-show"><i class="fas fa-globe"></i></div>
+                    <div id="social-hide">
+                      <div id="social-hide-child">
+                        <i class="fab fa-facebook-f"></i><i class="fab fa-twitter"></i>
+                        <i class="fab fa-instagram"></i>
+                      </div>
+                    </div>
+                  </div>
+
+            </div>
+           
+            <div id="home-lower"></div>
+        
+        </div>
+  
+        <div id="about">
+
+            <div id="leftside">
+              <!-- <div id="about-lines">
+                <a href="#">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  About
+                </a>
+              </div> -->
+              <p>About</p>
+
+                <div id="about-nav">
+                  <ul>
+                    <li><a href="">About</a></li><span>\</span>
+                    <li><a href="">Home</a></li><span>\</span>
+                    <li><a href="">Portfolio</a></li><span>\</span>
+                    <li><a href="">Contect</a></li>
+                  </ul>
+                </div>
+
+                <div id="image"></div>
+            </div>
+            <div id="rightside">
+
+              <div id="rightside-heading">I am a UX Designer and Art Director from Austria living in Berlin.</div>
+
+              <div id="rightside-para">
+                Artworks and illustrations were my gateway to the creative industry which led to the foundation of my own studio and to first steps in the digital world.
+              </div>
+
+              <div id="rightside-heading-2">Developer</div>
+              <div id="rightside-para-2">
+                Starting with basic websites several years ago I found myself working as an Art Director for complex projects with a holistic approach soon. Visually appealing designs, subtle details and brand guidelines combined to innovative interfaces across various touch points became my daily companion.
+              </div>
+              <div id="rightside-para-3">
+                Out of this love for aesthetic design my passion for functionality and structure evolved. Jumping right into Photoshop didn’t feel accurate anymore and skipping the steps of building a framework based on functionality and usability became inevitable.
+              </div>
+              <div id="rightside-heading-3">
+                UX Design
+              </div>
+              <div id="rightside-para-4">
+                A user-centered mindset and sensitivity for design turned out to be the perfect fit when collaborating with agencies, clients and brands to develop digital concepts and solve problems together.
+              </div>
+              <div id="rightside-para-5">
+                This rough framework outlines my process of developing digital experiences:
+              </div>
+              <div id="rightside-point-1">
+                <span>1.</span><h3>RESEARCH</h3><p>and gather the present state</p>
+              </div>
+              <div id="rightside-point-2">
+                <span>2.</span><h3>STRUCTURE</h3><p>setup and content of the project</p>
+              </div>
+              <div id="rightside-point-3">
+                <span>3.</span><h3>CONCEPT AND STRATEGY</h3>
+              </div>
+              <div id="rightside-point-4">
+                <span>4.</span><h3>CREATE</h3><p>evaluate and iterate deliverables like</p>
+              </div>
+            
+            </div>
+        </div>
+
+        <div id="portfolio">
+
+
+
+          <div id="portfolio-rightside">
+
+            <div id="first">
+              <div id="first-1">
+                <h3>See more days in timeline</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos distinctio voluptate.</p>
+                <a href="#">Sign up</a>
+              </div>
+              <div id="first-2">
+                <p>To learn more about... Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos distinctio voluptate.Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos distinctio voluptate.</p>
+                <a href="#">Learn more</a>
+                <a href="#">Privacy Statements</a>
+              </div>
+          </div>
+  
+          <div id="main-2-parent">
+          
+            <div id="main-2">
+            <div id="extention"><img src="./189397.png" alt=""><p>Limerick</p></div>
+            <div id="main-1">
+              <img src="./portfolio-images/Screenshot (84).png" alt="">
+              <a href="./Limerick/Limerick.html">
+                <div id="main-1-upper">
+                  <h2>Limerick.html</h2>
+                  <p>Web developement (D:)\html</p>
+                </div>
+              </a>
+            </div>
+          </div>
+          <div id="main-2">
+            <div id="extention"><img src="./189397.png" alt=""><p>NeoReach</p></div>
+            <div id="main-1">
+              <img src="./portfolio-images/Screenshot (85).png" alt="">
+              <a href="./NeoReach/NeoReach.html">
+                <div id="main-1-upper">
+                  <h2>NeoReach.html</h2>
+                  <p>Web developement (D:)\html</p>
+                </div>
+              </a>
+            </div>
+          </div>
+  
+          </div>
+
+          <div id="main-2-parent">
+          
+            <div id="main-2">
+            <div id="extention"><img src="./189397.png" alt=""><p>Techno Dark Version</p></div>
+            <div id="main-1">
+              <img src="./portfolio-images/Screenshot (93).png" alt="">
+              <a href="./Limerick/Limerick.html">
+                <div id="main-1-upper">
+                  <h2>Techno Dark Version.html</h2>
+                  <p>Web developement (D:)\html</p>
+                </div>
+              </a>
+            </div>
+          </div>
+          <div id="main-2">
+            <div id="extention"><img src="./189397.png" alt=""><p>Kerri(Animated)</p></div>
+            <div id="main-1">
+              <img src="./portfolio-images/Screenshot (91).png" alt="">
+              <a href="./NeoReach/NeoReach.html">
+                <div id="main-1-upper">
+                  <h2>Kerri.html</h2>
+                  <p>Web developement (D:)\html</p>
+                </div>
+              </a>
+            </div>
+          </div>
+  
+          </div>
+
+          <div id="main-2-parent">
+          
+            <div id="main-2">
+            <div id="extention"><img src="./189397.png" alt=""><p>Ella Mart + </p></div>
+            <div id="main-1">
+              <img src="./portfolio-images/Screenshot (87).png" alt="">
+              <a href="./Limerick/Limerick.html">
+                <div id="main-1-upper">
+                  <h2>Ella Mart + .html</h2>
+                  <p>Web developement (D:)\html</p>
+                </div>
+              </a>
+            </div>
+          </div>
+          <div id="main-2">
+            <div id="extention"><img src="./189397.png" alt=""><p>ZayShop</p></div>
+            <div id="main-1">
+              <img src="./portfolio-images/Screenshot (88).png" alt="">
+              <a href="./NeoReach/NeoReach.html">
+                <div id="main-1-upper">
+                  <h2>ZayShop.html</h2>
+                  <p>Web developement (D:)\html</p>
+                </div>
+              </a>
+            </div>
+          </div>
+  
+          </div>
+
+         
+          </div>
+
+
+
+          <div id="portfolio-leftside">
+            <!-- <div id="Portfolio-lines">
+              <a href="#">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                Portfolio
+              </a>
+            </div> -->
+            <p>Advance Projects</p>
+
+              <div id="portfolio-nav">
+                <ul>
+                  <li><a href="">About</a></li><span>\</span>
+                  <li><a href="">Home</a></li><span>\</span>
+                  <li><a href="">Portfolio</a></li><span>\</span>
+                  <li><a href="">Contect</a></li>
+                </ul>
+              </div>
+          </div>
+        </div>
+
+        <div id="quot-main">
+            <div id="blue-line"></div>
+            <div id="white-box">
+                <div id="red-line"></div>
+                <div id="qout-shape"></div>
+                  <div id="qoutation">
+                    <i class="fas fa-quote-left"></i>
+                    <p>“Experience is the name everyone gives to their mistakes.In order to be irreplaceable, one must always be different.Java is to JavaScript what car is to Carpet.” –</p>
+                  </div>
+                  <!-- <div id="qoutation-a">
+                    <i class="fas fa-quote-left"></i>
+                    <p>“Experience is the name everyone gives to their mistakes.In order to be irreplaceable, one must always be different.Java is to JavaScript what car is to Carpet.” –</p>
+                  </div> -->
+            </div>
+        </div>
+
+        <div id="portfolio">
+
+
+          <div id="portfolio-leftside">
+            <!-- <div id="Portfolio-lines">
+              <a href="#">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                Portfolio
+              </a>
+            </div> -->
+            <p>Recent Projects</p>
+
+              <div id="portfolio-nav">
+                <ul>
+                  <li><a href="">About</a></li><span>\</span>
+                  <li><a href="">Home</a></li><span>\</span>
+                  <li><a href="">Portfolio</a></li><span>\</span>
+                  <li><a href="">Contect</a></li>
+                </ul>
+              </div>
+          </div>
+
+          <div id="portfolio-rightside">
+
+  
+            <div id="main-2-parent">
+            
+              <div id="main-2">
+              <div id="extention"><img src="./189397.png" alt=""><p>TheGem</p></div>
+              <div id="main-1">
+                <img src="./portfolio-images/Screenshot (86).png" alt="">
+                <a href="./Limerick/Limerick.html">
+                  <div id="main-1-upper">
+                    <h2>Limerick.html</h2>
+                    <p>Web developement (D:)\html</p>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div id="main-2">
+              <div id="extention"><img src="./189397.png" alt=""><p>Flaris</p></div>
+              <div id="main-1">
+                <img src="./portfolio-images/Screenshot (89).png" alt="">
+                <a href="./NeoReach/NeoReach.html">
+                  <div id="main-1-upper">
+                    <h2>NeoReach.html</h2>
+                    <p>Web developement (D:)\html</p>
+                  </div>
+                </a>
+              </div>
+            </div>
+    
+            </div>
+  
+            <div id="main-2-parent">
+            
+              <div id="main-2">
+              <div id="extention"><img src="./189397.png" alt=""><p>Illdy</p></div>
+              <div id="main-1">
+                <img src="./portfolio-images/Screenshot (90).png" alt="">
+                <a href="./Limerick/Limerick.html">
+                  <div id="main-1-upper">
+                    <h2>Techno Dark Version.html</h2>
+                    <p>Web developement (D:)\html</p>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div id="main-2">
+              <div id="extention"><img src="./189397.png" alt=""><p>Flex Studio</p></div>
+              <div id="main-1">
+                <img src="./portfolio-images/Screenshot (92).png" alt="">
+                <a href="./NeoReach/NeoReach.html">
+                  <div id="main-1-upper">
+                    <h2>Kerri.html</h2>
+                    <p>Web developement (D:)\html</p>
+                  </div>
+                </a>
+              </div>
+            </div>
+    
+            </div>
+  
+            <div id="main-2-parent">
+            
+              <div id="main-2">
+              <div id="extention"><img src="./189397.png" alt=""><p>Techno Machine</p></div>
+              <div id="main-1">
+                <img src="./portfolio-images/Screenshot (94).png" alt="">
+                <a href="./Limerick/Limerick.html">
+                  <div id="main-1-upper">
+                    <h2>Ella Mart + .html</h2>
+                    <p>Web developement (D:)\html</p>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div id="main-2">
+              <div id="extention"><img src="./189397.png" alt=""><p>Visual</p></div>
+              <div id="main-1">
+                <img src="./portfolio-images/Screenshot (95).png" alt="">
+                <a href="./NeoReach/NeoReach.html">
+                  <div id="main-1-upper">
+                    <h2>ZayShop.html</h2>
+                    <p>Web developement (D:)\html</p>
+                  </div>
+                </a>
+              </div>
+            </div>
+    
+            </div>
+  
+           
+            </div>
+
+
+        </div>
+
+        <div id="service">
+            <div id="service-blue"></div>
+            <div id="service-white">
+
+              <div id="main-parent">
+                <div id="cube">
+                  <div class="cube-child">
+                  <div class="cube-face cube-front">
+                    <div id="team-image">
+                      <img src="./portfolio-images/team-01-thegem-person-80.jpg" alt=""></div>
+                    <div id="team-heading">Scott Jackson</div>
+                    <div id="team-para">Consultent</div>
+                    <div id="team-number">+1 (987) 1625346</div>
+                    <div id="team-email">info@domain.tld</div>
+                  </div>  
+                  <div class="cube-face cube-mid1">
+                    <div id="team-image">
+                      <img src="./portfolio-images/team-02-thegem-person-80.jpg" alt=""></div>
+                    <div id="team-heading">Ava Robinson</div>
+                    <div id="team-para">Consultent</div>
+                    <div id="team-number">+1 (987) 1625346</div>
+                    <div id="team-email">info@domain.tld</div>
+                  </div>  
+                  <div class="cube-face cube-right">
+                    <div id="team-image">
+                      <img src="./portfolio-images/team-03-thegem-person-80.jpg" alt=""></div>
+                    <div id="team-heading">Jackie Jackson</div>
+                    <div id="team-para">Consultent</div>
+                    <div id="team-number">+1 (987) 1625346</div>
+                    <div id="team-email">info@domain.tld</div>
+                  </div>  
+                  <div class="cube-face cube-mid2">
+                    <div id="team-image">
+                      <img src="./portfolio-images/team-04-thegem-person-80.jpg" alt=""></div>
+                    <div id="team-heading">Mel Granville</div>
+                    <div id="team-para">Consultent</div>
+                    <div id="team-number">+1 (987) 1625346</div>
+                    <div id="team-email">info@domain.tld</div>
+                  </div>  
+                  <div class="cube-face cube-back">
+                    <div id="team-image">
+                      <img src="./portfolio-images/team-05-thegem-person-80.jpg" alt=""></div>
+                    <div id="team-heading">Herman Ledford</div>
+                    <div id="team-para">Consultent</div>
+                    <div id="team-number">+1 (987) 1625346</div>
+                    <div id="team-email">info@domain.tld</div>
+                  </div>  
+                  <div class="cube-face cube-mid3">
+                    <div id="team-image">
+                      <img src="./portfolio-images/team-06-thegem-person-80.jpg" alt=""></div>
+                    <div id="team-heading">Cassandra Lynn</div>
+                    <div id="team-para">Consultent</div>
+                    <div id="team-number">+1 (987) 1625346</div>
+                    <div id="team-email">info@domain.tld</div>
+                  </div>  
+                  <div class="cube-face cube-left">
+                    <div id="team-image">
+                      <img src="./portfolio-images/team-04-thegem-person-80.jpg" alt=""></div>
+                    <div id="team-heading">Ava Robinson</div>
+                    <div id="team-para">Consultent</div>
+                    <div id="team-number">+1 (987) 1625346</div>
+                    <div id="team-email">info@domain.tld</div>
+                  </div>  
+                  <div class="cube-face cube-mid4">
+                    <div id="team-image">
+                      <img src="./portfolio-images/team-02-thegem-person-80.jpg" alt=""></div>
+                    <div id="team-heading">Mel Granville</div>
+                    <div id="team-para">Consultent</div>
+                    <div id="team-number">+1 (987) 1625346</div>
+                    <div id="team-email">info@domain.tld</div>
+                  </div>  
+          
+                </div>
+                </div>
+           
+                </div>
+
+            </div>
+        </div>
+
+        <div id="contact">
+
+
+              <div id="contact-rightside">
+
+                    <div id="contact-page">
+                <div id="contact-page-bar">
+                  <div id="closing-1">
+                    <div id="closing-1-a"></div>
+                    <div id="closing-1-b"></div>
+                    <div id="closing-1-c"></div>
+                  </div>
+                  <div id="closing-2"></div>
+                </div>
+                <div id="contact-page-heading">Contact Us</div>
+                <div id="contact-page-form">
+                  <input type="text" name="" id="" placeholder="   Name *">
+                  <input type="email" name="" id="" placeholder="   Email *">
+                  <input type="text" placeholder="   Contect No *"> 
+                  <input type="text" name="" id="form-text" placeholder="   Message">
+                  <a href="#">CENCEL</a><a href="#">SEND</a>
+                 </div>
+
+                 <p>CONTACT INF : +62 81 314 543 743</p>
+
+                    </div>
+
+              </div>
+              <div id="contact-leftside">
+            <!-- <div id="contact-lines">
+              <a href="#">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                About
+              </a>
+            </div> -->
+            <p>Contact</p>
+
+              <div id="contact-nav">
+                <ul>
+                  <li><a href="">About</a></li><span>\</span>
+                  <li><a href="">Home</a></li><span>\</span>
+                  <li><a href="">Portfolio</a></li><span>\</span>
+                  <li><a href="">Contect</a></li>
+                </ul>
+              </div>
+
+                <div id="image"></div>
+               </div>
+
+        </div>
+    
+
+
+ 
+    
+
+      
+
+
+  
+</body>
+</html>
